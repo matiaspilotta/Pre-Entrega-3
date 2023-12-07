@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+
+
+{% block contenidoQueCambia %}
+    <h1>Llenar todos los campos!</h1>
+    <h3>Para crear la cuenta</h3>
+    <body style="background-color: rgba(30, 31, 30, 0.178);">
+        <form action= "{% url 'crear_cliente' %}" method="POST">
+            {% csrf_token %}
+            {{ miFormulario.as_p }}
+            <input type="submit" value="Guardar">
+        </form>
+    </body>
+
+    </html>
+{% endblock %}

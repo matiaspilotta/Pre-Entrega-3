@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+
+
+{% block contenidoQueCambia %}
+
+    <body>
+        <form action= "{% url 'editar' id %}" method="POST">
+            {% csrf_token %}
+            {{ miFormulario.as_p }}
+            <input type="submit" value="Editar">
+        </form>
+    </body>
+
+    </html>
+{% endblock %}
